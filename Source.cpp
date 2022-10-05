@@ -1,20 +1,27 @@
 #include<iostream>
 using namespace std;
 int main() {
-	int arr[5] = { 4,2,7,1,9 };
-	int temp, i, j;
+	int num1, num2, result = 0;
 	
-	for (i = 0; i < 4; i++) {
-		for (j = 0; j < 4 - i; j++) {
-			if (arr[j] > arr[j + 1]) {
-				temp = arr[j + 1];
-				arr[j + 1] = arr[j];
-				arr[j] = temp;
-			}
+	
+	do {
+		cout << "Enter the value : " << endl;
+		cin >> num1;
+		cout << "Enter the value   : " << endl;
+		cin >> num2;
+
+		if (num1 > 0) {
+		
+			result = result + num1;
+		
+		}
+		if (num2 > 0) {
+			
+			result = result + num2;
+			
 		}
 	}
-	cout << "The sorted array in ascending order is " << endl;
-	for (i = 0; i < 5; i++)
-		cout << " " << arr[i];
-	return 0;
-}
+		while (result <= 10);
+		cout << "Result = " << result;
+		return 0;
+	}
